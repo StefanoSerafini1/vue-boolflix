@@ -1,3 +1,4 @@
+/* generali */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@ body{
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
+/* ricerca dei film e delle serie tv */
 .cercaFilm{
   margin:10px 10px;
 }
@@ -22,17 +24,24 @@ body{
 .contenitoreLista{
     margin: 10px;
 }
-.categoria h3{
-  margin-top: 7px;
-}
+/* zona delle liste film e serie tv */
 .listaFilm ,
 .listaSerie {
-
+ padding: 6px;
 }
+.listaFilm li,
+.listaSerie li{
+  list-style-type: none;
+}
+.listaFilm .categoria{
+  list-style-type: circle;
+}
+/* lingua immagini */
 .lingua img{
   height: 15px;
   width: 25px;
 }
+/* stelle voto */
 .stelleVoto .fas{
   color: yellow;
 }
