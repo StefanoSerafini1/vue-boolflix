@@ -35,9 +35,9 @@ var app= new Vue({
             }
           })
           .then((serie) => {
-                 //pusho o assegno nella lista film tutti i risultati(dati) dell'api
+                 //pusho o assegno nella lista serie tutti i risultati(dati) dell'api
                  this.serieTv = serie.data.results;
-                 console.log(this.serieTv);
+                 //console.log(this.serieTv);
                });
                this.cerca = '';
       }
