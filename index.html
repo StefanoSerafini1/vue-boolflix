@@ -25,10 +25,12 @@
       </div>
       <div class="contenitoreLista">
         <div class="listaFilm" v-for="film in films">
-          <h2>{{ film.title }}</h2>
-          <span class="">{{ film.original_title }}</span>
-          <span class="">{{ film.original_language }}</span>
-          <span class="">{{ film.vote_average }}</span>
+          <ul>
+            <li><h3>{{ film.title }}</h3></li>
+            <li>{{ film.original_title }}</li>
+            <li>{{ film.original_language }}</li>
+            <li>{{ film.vote_average }}</li>
+          </ul>
         </div>
       </div>
     </div>
