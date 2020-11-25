@@ -10,7 +10,7 @@ body{
 }
 /* ricerca dei film e delle serie tv */
 .cercaFilm{
-  margin:10px 10px;
+  margin:10px 15px;
 }
 .cercaFilm input{
   margin-right: 10px;
@@ -28,12 +28,14 @@ body{
 .listaFilm ,
 .listaSerie {
  padding: 6px;
+ margin-left: 15px;
 }
 .listaFilm li,
 .listaSerie li{
   list-style-type: none;
 }
-.listaFilm .categoria{
+.listaFilm .categoria,
+.listaSerie .categoria{
   list-style-type: circle;
 }
 /* lingua immagini */
