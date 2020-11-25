@@ -19,9 +19,17 @@
     <div id="app">
       <div class="contenitoreCerca">
         <div class="cercaFilm">
-        <input type="search" v-model="cercaFilm" placeholder="Inserisci il nome del film" name="" value="">
-        <button type="button" @click="genereFilm" name="button">Search <i class="fas fa-search"></i></button>
+          <input type="search" v-model="cercaFilm" placeholder="Inserisci il nome del film" name="" value="">
+          <button type="button" @click="genereFilm" name="button">Search <i class="fas fa-search"></i></button>
+        </div>
       </div>
+      <div class="contenitoreLista">
+        <div class="listaFilm" v-for="film in films">
+          <h2>{{ film.title }}</h2>
+          <span class="">{{ film.original_title }}</span>
+          <span class="">{{ film.original_language }}</span>
+          <span class="">{{ film.vote_average }}</span>
+        </div>
       </div>
     </div>
 
