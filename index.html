@@ -26,7 +26,7 @@
       <div class="contenitoreLista">
         <div class="listaFilm" v-for="film in films">
           <ul>
-            <li><h3>Film</h3></li>
+            <li class="categoria"><h3>Film</h3></li>
             <li><h3>{{ film.title }}</h3></li>
             <li>Titolo originale: {{ film.original_title }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
@@ -41,7 +41,7 @@
         </div>
         <div class="listaSerie" v-for="serie in serieTv">
           <ul>
-            <li><h3>Serie Tv</h3></li>
+            <li class="categoria"><h3>Serie Tv</h3></li>
             <li><h3>{{ serie.name }}</h3></li>
             <li>Titolo originale: {{ serie.original_name }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->

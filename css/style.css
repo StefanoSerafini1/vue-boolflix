@@ -22,11 +22,17 @@ body{
 .contenitoreLista{
     margin: 10px;
 }
+.categoria h3{
+  margin-top: 7px;
+}
 .listaFilm ,
-.listaSerie{
+.listaSerie {
 
 }
 .lingua img{
   height: 15px;
   width: 25px;
+}
+.stelleVoto .fas{
+  color: yellow;
 }
