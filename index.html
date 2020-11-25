@@ -19,8 +19,8 @@
     <div id="app">
       <div class="contenitoreCerca">
         <div class="cercaFilm">
-        <input type="search" placeholder="Inserisci il nome del film" name="" value="">
-        <button type="button" name="button">CERCA</button>
+        <input type="search" v-model="cercaFilm" placeholder="Inserisci il nome del film" name="" value="">
+        <button type="button" @click="genereFilm" name="button">Search <i class="fas fa-search"></i></button>
       </div>
       </div>
     </div>
