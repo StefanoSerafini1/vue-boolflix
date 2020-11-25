@@ -1,8 +1,7 @@
 var app= new Vue({
   el: '#app',
   data:{
-    cercaFilm:'',
-    cercaSerie:'',
+    cerca:'',
     //creo la lista film dove andrò ad inserire tutti i risultati(dati) dei film
     films: [
 
@@ -15,20 +14,32 @@ var app= new Vue({
   methods: {
     genereFilm() {
            //controllo che venga scritto qualcosa
-      if(this.cercaFilm != '') {
-        axios
-          .get ('https://api.themoviedb.org/3/search/movie',{
-            params: {
+      if(this.cerca != '') {
+        axios//richiamo film
+          .get ('https://api.themoviedb.org/3/search/movie',{//chiamata
+            params: {//parametri chiamata
               api_key: '1ac156bff9bfdcfc371d1eb86745089f',
-              query: this.cercaFilm,
+              query: this.cerca,
             }
           })
-          .then((films) => {
+          .then((film) => {
                  //pusho o assegno nella lista film tutti i risultati(dati) dell'api
-                 this.films = films.data.results;
-                 console.log(this.films);
+                 this.films = film.data.results;
+                 //console.log(this.films);
                });
-               this.cercaFilm = '';
+        axios//richiamo serie
+          .get ('https://api.themoviedb.org/3/search/tv',{//chiamata
+            params: {//parametri chiamata
+              api_key: '1ac156bff9bfdcfc371d1eb86745089f',
+              query: this.cerca,
+            }
+          })
+          .then((serie) => {
+                 //pusho o assegno nella lista film tutti i risultati(dati) dell'api
+                 this.serieTv = serie.data.results;
+                 console.log(this.serieTv);
+               });
+               this.cerca = '';
       }
     }
   }
