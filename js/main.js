@@ -7,7 +7,7 @@ var app= new Vue({
     films: [
 
     ],
-    serie: [
+    serieTv: [
 
     ]
   },

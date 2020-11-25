@@ -26,10 +26,20 @@
       <div class="contenitoreLista">
         <div class="listaFilm" v-for="film in films">
           <ul>
+            <li><h3>Film</h3></li>
             <li><h3>{{ film.title }}</h3></li>
-            <li>{{ film.original_title }}</li>
-            <li>{{ film.original_language }}</li>
-            <li>{{ film.vote_average }}</li>
+            <li>Titolo originale: {{ film.original_title }}</li>
+            <li>Lingua: {{ film.original_language }}</li>
+            <li>Voto: {{ film.vote_average }}</li>
+          </ul>
+        </div>
+        <div class="listaSerie" v-for="serie in serieTv">
+          <ul>
+            <li><h3>Serie Tv</h3></li>
+            <li><h3>{{ serie.name }}</h3></li>
+            <li>{{ serie.original_name }}</li>
+            <li>{{ serie.original_language }}</li>
+            <li>{{ serie.vote_average }}</li>
           </ul>
         </div>
       </div>
