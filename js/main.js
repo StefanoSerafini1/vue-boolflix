@@ -41,6 +41,11 @@ var app= new Vue({
                });
                this.cerca = '';
       }
+    },
+    //funzione per arrotondare voto da (0 a 10) a (0 a 5)
+    stelleVoto(vote) {
+      return Math.floor(vote / 2);
     }
+
   }
 });
