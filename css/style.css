@@ -28,11 +28,17 @@ body{
   width: 300px;
   padding: 5px;
   border-radius: 5px;
+  outline: none;
+  border: none;
 }
 .cerca button{
   padding: 5px;
   border-radius: 5px;
   margin-right: 10px;
+  outline: none;
+  border: none;
+  color: black;
+  background: red;
 }
 .contenitoreLista{
   margin: 30px;
@@ -43,6 +49,7 @@ body{
 }
 /* zona delle liste film e serie tv */
 .lista {
+  width: 150px;
   height: 300px;
   background-color:#3d3e4996;
   padding: 10px;
@@ -56,11 +63,16 @@ body{
   font-size: 13px;
 }
 h3{
-  color: #747997;
-  font-size: 13px;
+  color: white;
+  font-size: 15px;
+}
+.titoloOriginale,
+.categoria{
+  color:#747997;
 }
 .lista li{
   list-style-type: none;
+  padding: 5px;
 }
 /* lingua immagini */
 .lingua img{
