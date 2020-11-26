@@ -2,6 +2,7 @@ var app= new Vue({
   el: '#app',
   data:{
     cerca:'',
+    //bandiere per lingua
     bandiere: ['it', 'en'],
     //creo la lista film dove andrò ad inserire tutti i risultati(dati) dei film
     films: [
@@ -40,7 +41,7 @@ var app= new Vue({
           .then((serie) => {
                  //pusho o assegno nella lista serie tutti i risultati(dati) dell'api
                  this.serieTv = serie.data.results;
-                 //console.log(this.serieTv);
+                 console.log(this.serieTv);
                });
                this.cerca = '';
       }

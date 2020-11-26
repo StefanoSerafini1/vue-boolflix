@@ -38,7 +38,7 @@
             <li class="titoloOriginale">{{ film.original_title }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
             <li class="lingua">
-              <img v-if="bandiereScelta(film.original_language)" :src="`./img/${film.original_language}.png`" alt="">
+              <img v-if="bandiereScelta(film.original_language)" :src="`./img/${film.original_language}.png`" alt="bandiera della lingua">
               <div v-else class="lingua">
                 {{ film.original_language }}
               </div>
@@ -76,7 +76,6 @@
         </div>
       </div>
     </div>
-
     <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
