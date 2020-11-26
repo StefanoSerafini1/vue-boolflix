@@ -28,26 +28,27 @@
       </div>
       <div class="contenitoreLista">
         <div class="lista" v-for="film in films">
-          <ul>
-            <li class="locandina">
-              <img v-if="film.poster_path":src="`http://image.tmdb.org/t/p/w342/${film.poster_path}`" alt="locandina film">
-              <img v-else src="img/notfound.png" alt="locandina not found">
-            </li>
-            <li class="categoria"><h4>Film</h4></li>
-            <li><h3>{{ film.title }}</h3></li>
-            <li class="titoloOriginale">{{ film.original_title }}</li>
-            <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
-            <li class="lingua">
-              <img v-if="bandiereScelta(film.original_language)" :src="`./img/${film.original_language}.png`" alt="bandiera della lingua">
-              <div v-else class="lingua">
-                {{ film.original_language }}
-              </div>
-            </li>
-            <li class="stelleVoto">
-              <i class="fas fa-star" v-for="i in stelleVoto(film.vote_average)"></i>
-              <i class="far fa-star" v-for="i in (5 - stelleVoto(film.vote_average))"></i>
-            </li>
-          </ul>
+            <p>{{ film.overview }}</p>
+            <ul>
+              <li class="locandina">
+                <img v-if="film.poster_path":src="`http://image.tmdb.org/t/p/w342/${film.poster_path}`" alt="locandina film">
+                <img v-else src="img/notfound.png" alt="locandina not found">
+              </li>
+              <li class="categoria"><h4>Film</h4></li>
+              <li><h3>{{ film.title }}</h3></li>
+              <li class="titoloOriginale">{{ film.original_title }}</li>
+              <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
+              <li class="lingua">
+                <img v-if="bandiereScelta(film.original_language)" :src="`./img/${film.original_language}.png`" alt="bandiera della lingua">
+                <div v-else class="lingua">
+                  {{ film.original_language }}
+                </div>
+              </li>
+              <li class="stelleVoto">
+                <i class="fas fa-star" v-for="i in stelleVoto(film.vote_average)"></i>
+                <i class="far fa-star" v-for="i in (5 - stelleVoto(film.vote_average))"></i>
+              </li>
+            </ul>
         </div>
         <div class="lista" v-for="serie in serieTv">
           <ul>

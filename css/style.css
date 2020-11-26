@@ -37,7 +37,7 @@ body{
 }
 .cerca button{
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 25%;
   margin-right: 10px;
   outline: none;
   border: none;
@@ -61,15 +61,17 @@ body{
   min-height: 400px;
   background-color:#3d3e4996;
   padding: 10px;
-  margin: 10px 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   text-align: center;
   color: white;
-  font-size: 13px;
   cursor: pointer;
+}
+.lista:hover{
+  opacity:1;
+  background: rgba(0, 0, 0, 0.5);
 }
 h3{
   color: white;
@@ -93,6 +95,23 @@ h3{
   max-height: 175px;
   margin-bottom: 10px;
 }
+/* overview descrizione */
+.lista p{
+  display: none;
+}
+
+.lista:hover p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+.lista:hover li{
+  display:none;
+}
+
 /* lingua immagini */
 .lingua img{
   height: 15px;
