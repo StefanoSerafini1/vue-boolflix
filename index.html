@@ -29,7 +29,8 @@
       <div class="contenitoreLista">
         <div class="lista" v-for="film in films">
           <div class="trama">
-              <p>{{ film.overview }}</p>
+              <p v-if="film.overview != ''">{{ film.overview }}</p>
+              <p v-else>Trama del film non presente nel database</p>
           </div>
             <ul>
               <li class="locandina">
@@ -54,7 +55,8 @@
         </div>
         <div class="lista" v-for="serie in serieTv">
           <div class="trama">
-              <p>{{ serie.overview }}</p>
+              <p v-if="serie.overview != ''">{{ serie.overview }}</p>
+              <p v-else>Trama della serie non presente nel database </p>
           </div>
           <ul>
             <li class="locandina">
