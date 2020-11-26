@@ -46,7 +46,7 @@
           <ul>
             <li class="categoria"><h4>Serie Tv</h4></li>
             <li><h3>{{ serie.name }}</h3></li>
-            <li>{{ serie.original_name }}</li>
+            <li class="titoloOriginale">{{ serie.original_name }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
             <li class="lingua"v-if="serie.original_language === 'it'"><img :src="`img/${serie.original_language}.png`"></li>
             <li class="lingua"v-else-if="serie.original_language === 'en'"><img :src="`img/${serie.original_language}.png`"></li>

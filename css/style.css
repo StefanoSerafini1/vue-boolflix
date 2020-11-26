@@ -49,8 +49,8 @@ body{
 }
 /* zona delle liste film e serie tv */
 .lista {
-  width: 150px;
-  height: 300px;
+  width: 200px;
+  height: 400px;
   background-color:#3d3e4996;
   padding: 10px;
   margin: 10px 10px;
