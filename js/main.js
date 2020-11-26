@@ -2,6 +2,7 @@ var app= new Vue({
   el: '#app',
   data:{
     cerca:'',
+    bandiere: ['it', 'en'],
     //creo la lista film dove andrò ad inserire tutti i risultati(dati) dei film
     films: [
 
@@ -20,6 +21,7 @@ var app= new Vue({
             params: {//parametri chiamata
               api_key: '1ac156bff9bfdcfc371d1eb86745089f',
               query: this.cerca,
+              language: 'it-IT',
             }
           })
           .then((film) => {
@@ -32,6 +34,7 @@ var app= new Vue({
             params: {//parametri chiamata
               api_key: '1ac156bff9bfdcfc371d1eb86745089f',
               query: this.cerca,
+              language: 'it-IT',
             }
           })
           .then((serie) => {
@@ -45,6 +48,9 @@ var app= new Vue({
     //funzione per arrotondare voto da (0 a 10) a (0 a 5)
     stelleVoto(vote) {
       return Math.floor(vote / 2);
+    },
+    bandiereScelta(lang){
+           return this.bandiere.includes(lang);
     }
 
   }
