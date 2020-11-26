@@ -10,20 +10,29 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 /* ricerca dei film e delle serie tv */
-.cerca{
+.logoCerca{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background: #3d3e4996;
 }
+.logo img{
+  height: 60px;
+  width: 150px;
+  margin-left: 10px;
+}
 .cerca input{
-  margin-right: 10px;
-  width: 500px;
+  width: 300px;
   padding: 5px;
+  border-radius: 5px;
 }
 .cerca button{
   padding: 5px;
   border-radius: 5px;
+  margin-right: 10px;
 }
 .contenitoreLista{
   margin: 30px;
