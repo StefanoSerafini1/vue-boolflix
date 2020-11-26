@@ -5,38 +5,53 @@
   box-sizing: border-box;
 }
 body{
+  background: #15182af0;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
 /* ricerca dei film e delle serie tv */
-.cercaFilm{
-  margin:10px 15px;
+.cerca{
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  background: #3d3e4996;
 }
-.cercaFilm input{
+.cerca input{
   margin-right: 10px;
   width: 500px;
   padding: 5px;
 }
-.cercaFilm button{
+.cerca button{
   padding: 5px;
   border-radius: 5px;
 }
 .contenitoreLista{
-    margin: 10px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 /* zona delle liste film e serie tv */
-.listaFilm ,
-.listaSerie {
- padding: 6px;
- margin-left: 15px;
+.lista {
+  height: 300px;
+  background-color:#3d3e4996;
+  padding: 10px;
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 13px;
 }
-.listaFilm li,
-.listaSerie li{
+h3{
+  color: #747997;
+  font-size: 13px;
+}
+.lista li{
   list-style-type: none;
-}
-.listaFilm .categoria,
-.listaSerie .categoria{
-  list-style-type: circle;
 }
 /* lingua immagini */
 .lingua img{

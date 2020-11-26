@@ -17,39 +17,42 @@
   </head>
   <body>
     <div id="app">
-      <div class="contenitoreCerca">
-        <div class="cercaFilm">
+      <div class="logoCerca">
+        <div class="logo">
+
+        </div>
+        <div class="cerca">
           <input type="search" v-model="cerca" placeholder="Inserisci il nome del film o della serie tv" name="" value="">
           <button type="button" @click="genereFilm" name="button">Search <i class="fas fa-search"></i></button>
         </div>
       </div>
       <div class="contenitoreLista">
-        <div class="listaFilm" v-for="film in films">
+        <div class="lista" v-for="film in films">
           <ul>
             <li class="categoria"><h4>Film</h4></li>
             <li><h3>{{ film.title }}</h3></li>
-            <li>Titolo originale: {{ film.original_title }}</li>
+            <li>{{ film.original_title }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
-            <li class="lingua"v-if="film.original_language === 'it'">Lingua: <img :src="`img/${film.original_language}.png`"></li>
-            <li class="lingua"v-else-if="film.original_language === 'en'">Lingua: <img :src="`img/${film.original_language}.png`"></li>
-            <li class="lingua" v-else-if="film.original_language !== 'en' && film.original_language !== 'it'">Lingua: {{ film.original_language }}</li>
-            <li class="stelleVoto">Voto:
+            <li class="lingua"v-if="film.original_language === 'it'"> <img :src="`img/${film.original_language}.png`"></li>
+            <li class="lingua"v-else-if="film.original_language === 'en'"><img :src="`img/${film.original_language}.png`"></li>
+            <li class="lingua" v-else-if="film.original_language !== 'en' && film.original_language !== 'it'">{{ film.original_language }}</li>
+            <li class="stelleVoto">
               <i class="fas fa-star" v-for="i in stelleVoto(film.vote_average)"></i>
               <i class="far fa-star" v-for="i in (5 - stelleVoto(film.vote_average))"></i>
             </li>
           </ul>
         </div>
-        <div class="listaSerie" v-for="serie in serieTv">
+        <div class="lista" v-for="serie in serieTv">
           <ul>
             <li class="categoria"><h4>Serie Tv</h4></li>
             <li><h3>{{ serie.name }}</h3></li>
-            <li>Titolo originale: {{ serie.original_name }}</li>
+            <li>{{ serie.original_name }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
-            <li class="lingua"v-if="serie.original_language === 'it'">Lingua: <img :src="`img/${serie.original_language}.png`"></li>
-            <li class="lingua"v-else-if="serie.original_language === 'en'">Lingua: <img :src="`img/${serie.original_language}.png`"></li>
-            <li class="lingua" v-else-if="serie.original_language !== 'en' && serie.original_language !== 'it'">Lingua: {{ serie.original_language }}</li>
+            <li class="lingua"v-if="serie.original_language === 'it'"><img :src="`img/${serie.original_language}.png`"></li>
+            <li class="lingua"v-else-if="serie.original_language === 'en'"><img :src="`img/${serie.original_language}.png`"></li>
+            <li class="lingua" v-else-if="serie.original_language !== 'en' && serie.original_language !== 'it'">{{ serie.original_language }}</li>
             <!-- stelle per il voto con funz stelleVoto-->
-            <li class="stelleVoto">Voto:
+            <li class="stelleVoto">
             <!--stelle scure per voto-->
               <i class="fas fa-star" v-for="i in stelleVoto(serie.vote_average)"></i>
             <!--stelle chiare differenza tra voto (stelle scure) e voto massimo mettendo stelle chiare  -->
