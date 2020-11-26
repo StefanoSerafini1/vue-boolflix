@@ -70,8 +70,9 @@ body{
   cursor: pointer;
 }
 .lista:hover{
-  opacity:1;
-  background: rgba(0, 0, 0, 0.5);
+  background: #3d3e4996;
+  display: flex;
+  justify-content: center;
 }
 h3{
   color: white;
@@ -96,15 +97,12 @@ h3{
   margin-bottom: 10px;
 }
 /* overview descrizione */
-.lista p{
+.trama p{
   display: none;
 }
 
 .lista:hover p{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   font-size: 15px;
   color: white;
 }

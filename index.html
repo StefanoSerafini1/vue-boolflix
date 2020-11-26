@@ -28,7 +28,9 @@
       </div>
       <div class="contenitoreLista">
         <div class="lista" v-for="film in films">
-            <p>{{ film.overview }}</p>
+          <div class="trama">
+              <p>{{ film.overview }}</p>
+          </div>
             <ul>
               <li class="locandina">
                 <img v-if="film.poster_path":src="`http://image.tmdb.org/t/p/w342/${film.poster_path}`" alt="locandina film">
@@ -51,6 +53,9 @@
             </ul>
         </div>
         <div class="lista" v-for="serie in serieTv">
+          <div class="trama">
+              <p>{{ serie.overview }}</p>
+          </div>
           <ul>
             <li class="locandina">
               <img v-if="serie.poster_path":src="`http://image.tmdb.org/t/p/w342/${serie.poster_path}`" alt="locandina serie tv">
