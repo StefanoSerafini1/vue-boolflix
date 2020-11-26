@@ -22,7 +22,7 @@
           <img src="img/logo.png" alt="logo">
         </div>
         <div class="cerca">
-          <input type="search" v-model="cerca" placeholder="Inserisci il nome del film o della serie tv" name="" value="">
+          <input type="search" v-model="cerca" @keyup.enter="genereFilm" placeholder="Inserisci il nome del film o della serie tv" name="" value="">
           <button type="button" @click="genereFilm" name="button"><i class="fas fa-search"></i></button>
         </div>
       </div>
@@ -33,9 +33,12 @@
             <li><h3>{{ film.title }}</h3></li>
             <li class="titoloOriginale">{{ film.original_title }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
-            <li class="lingua"v-if="film.original_language === 'it'"> <img :src="`img/${film.original_language}.png`"></li>
-            <li class="lingua"v-else-if="film.original_language === 'en'"><img :src="`img/${film.original_language}.png`"></li>
-            <li class="lingua" v-else-if="film.original_language !== 'en' && film.original_language !== 'it'">{{ film.original_language }}</li>
+            <li class="lingua">
+              <img v-if="bandiereScelta(film.original_language)" :src="`./img/${film.original_language}.png`" alt="">
+              <div v-else class="lingua">
+                {{ film.original_language }}
+              </div>
+            </li>
             <li class="stelleVoto">
               <i class="fas fa-star" v-for="i in stelleVoto(film.vote_average)"></i>
               <i class="far fa-star" v-for="i in (5 - stelleVoto(film.vote_average))"></i>
@@ -49,9 +52,9 @@
             <li class="titoloOriginale">{{ serie.original_name }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
             <li class="lingua">
-              <img v-if="bandiereScelta(result.original_language)" :src="`./img/${result.original_language}.png`" alt="">
+              <img v-if="bandiereScelta(serie.original_language)" :src="`./img/${serie.original_language}.png`" alt="">
               <div v-else class="lingua">
-                {{ result.original_language }}
+                {{ serie.original_language }}
               </div>
             </li>
             <!-- stelle per il voto con funz stelleVoto-->
