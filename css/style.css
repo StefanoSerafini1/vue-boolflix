@@ -49,8 +49,8 @@ body{
 }
 /* zona delle liste film e serie tv */
 .lista {
-  width: 200px;
-  height: 400px;
+  width: 250px;
+  min-height: 400px;
   background-color:#3d3e4996;
   padding: 10px;
   margin: 10px 10px;
@@ -70,9 +70,18 @@ h3{
 .categoria{
   color:#747997;
 }
+.lista ul{
+  width: 80%%;
+  height: 100%;
+}
 .lista li{
   list-style-type: none;
   padding: 5px;
+}
+.lista img{
+  width: 80%;
+  max-height: 175px;
+  margin-bottom: 10px;
 }
 /* lingua immagini */
 .lingua img{

@@ -29,6 +29,10 @@
       <div class="contenitoreLista">
         <div class="lista" v-for="film in films">
           <ul>
+            <li class="locandina">
+              <img v-if="film.poster_path":src="`http://image.tmdb.org/t/p/w342/${film.poster_path}`" alt="locandina film">
+              <img v-else src="img/notfound.png" alt="locandina not found">
+            </li>
             <li class="categoria"><h4>Film</h4></li>
             <li><h3>{{ film.title }}</h3></li>
             <li class="titoloOriginale">{{ film.original_title }}</li>
@@ -47,6 +51,10 @@
         </div>
         <div class="lista" v-for="serie in serieTv">
           <ul>
+            <li class="locandina">
+              <img v-if="serie.poster_path":src="`http://image.tmdb.org/t/p/w342/${serie.poster_path}`" alt="locandina serie tv">
+              <img v-else src="img/notfound.png" alt="locandina not found">
+            </li>
             <li class="categoria"><h4>Serie Tv</h4></li>
             <li><h3>{{ serie.name }}</h3></li>
             <li class="titoloOriginale">{{ serie.original_name }}</li>
