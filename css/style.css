@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body{
-  background: #15182af0;
+  background: black;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
@@ -17,7 +17,7 @@ body{
   padding: 10px;
   width: 100%;
   height: 70px;
-  background: #3d3e4996;
+  background: #0f0f0ff2;
 }
 .logo img{
   height: 60px;
@@ -41,12 +41,11 @@ body{
   margin-right: 10px;
   outline: none;
   border: none;
-  color: black;
-  background: red;
+  color: red;
+  background: #0f0f0ff2;
 }
 .cerca button:active{
-  border: 2px red solid;
-  border-radius: 5px;
+  border: 2px #0f0f0ff2 solid;
 }
 .contenitoreLista{
   margin: 30px;
@@ -60,7 +59,7 @@ body{
   width: 250px;
   min-height: 475px;
   max-height: 500px;
-  background-color:#3d3e4996;
+  background-color:#0f0f0ff2;
   padding: 10px;
   margin: 10px;
   display: flex;
@@ -71,11 +70,9 @@ body{
   cursor: pointer;
   border-radius: 5px;
 }
-.lista:hover{
-  min-height: 475px;
-  background: #3d3e4996;
-  display: flex;
-  justify-content: center;
+.notfound{
+  color:white;
+  font-size: 25px;
 }
 h3{
   color: white;
@@ -113,6 +110,12 @@ h3{
   max-height: 400px;
   overflow-y: auto;
   padding: 15px;
+}
+.lista:hover{
+  min-height: 475px;
+  background: #0f0f0ff2;
+  display: flex;
+  justify-content: center;
 }
 .lista:hover p,
 .lista:hover .categoria,
@@ -152,5 +155,5 @@ p{
   color: #ca3509f5;
 }
 .stelleVoto .far{
-  color: black;
+  color: red;
 }

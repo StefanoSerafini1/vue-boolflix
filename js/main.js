@@ -2,7 +2,7 @@ var app= new Vue({
   el: '#app',
   data:{
     cerca:'',
-    notfound:'',
+    notfound:'no',
     //bandiere per lingua
     bandiere: ['it', 'en', 'es', 'ja', 'de'],
     //creo la lista film dove andrò ad inserire tutti i risultati(dati) dei film
