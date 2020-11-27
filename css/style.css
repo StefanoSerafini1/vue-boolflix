@@ -92,8 +92,7 @@ h3{
 }
 .locandina img{
   width: 80%;
-  min-height: 150px;
-  max-height: 175px;
+  max-height: 180px;
   margin-bottom: 10px;
 }
 /* overview descrizione */
@@ -111,7 +110,7 @@ h3{
 .lista:hover li{
   display:none;
 }
-/*design scrollbar della descrizione */
+/*design scrollbar della descrizione per google chrome */
 p::-webkit-scrollbar{
   width: 5px;
 }
@@ -123,7 +122,11 @@ p::-webkit-scrollbar-thumb{
   background: #15182af0;
   border-radius: 10px;
 }
-
+/* design scrollbar della descrizione per firefox */
+p{
+  scrollbar-width: thin;
+  scrollbar-color:#15182af0  grey;
+}
 /* lingua immagini */
 .lingua img{
   height: 15px;
