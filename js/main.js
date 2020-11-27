@@ -56,6 +56,7 @@ var app= new Vue({
           this.notfound='si';
           console.log(this.notfound);
         }
+
     },
     //funzione per arrotondare voto da (0 a 10) a (0 a 5)
     stelleVoto(vote) {
