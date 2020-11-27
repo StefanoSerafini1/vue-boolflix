@@ -49,14 +49,14 @@
               </li>
               <li><h3>{{ film.title }}</h3></li>
               <li class="titoloOriginale">{{ film.original_title }}</li>
-              <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
-              <li class="lingua">
-                <img v-if="bandiereScelta(film.original_language)" :src="`./img/${film.original_language}.png`" alt="bandiera della lingua">
-                <div v-else class="lingua">
-                  {{ film.original_language }}
-                </div>
-              </li>
             </ul>
+            <div class="lingua">
+              <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
+              <img v-if="bandiereScelta(film.original_language)" :src="`./img/${film.original_language}.png`" alt="bandiera della lingua">
+              <div v-else class="lingua">
+                {{ film.original_language }}
+              </div>
+            </div>
         </div>
         <!-- lista delle serie tv -->
         <div class="lista" v-for="serie in serieTv">

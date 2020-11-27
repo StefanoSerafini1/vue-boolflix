@@ -11,6 +11,9 @@ var app= new Vue({
     ],
     serieTv: [
 
+    ],
+    generi:[
+
     ]
   },
 
@@ -29,7 +32,6 @@ var app= new Vue({
           .then((film) => {
                  //pusho o assegno nella lista film tutti i risultati(dati) dell'api
                  this.films = film.data.results;
-                 console.log(this.films);
                });
         axios//richiamo serie
           .get ('https://api.themoviedb.org/3/search/tv',{//chiamata
