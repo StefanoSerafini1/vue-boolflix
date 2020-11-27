@@ -31,6 +31,11 @@
       <div class="contenitoreLista">
         <!-- lista dei film -->
         <div class="lista" v-for="film in films">
+          <h4 class="categoria">Film</h4>
+          <div class="stelleVoto">
+            <i class="fas fa-star" v-for="i in stelleVoto(film.vote_average)"></i>
+            <i class="far fa-star" v-for="i in (5 - stelleVoto(film.vote_average))"></i>
+          </div>
           <div class="trama">
               <p v-if="film.overview != ''">{{ film.overview }}</p>
               <p v-else>Trama del film non presente nel database</p>
@@ -40,7 +45,6 @@
                 <img v-if="film.poster_path":src="`http://image.tmdb.org/t/p/w342/${film.poster_path}`" alt="locandina film">
                 <img v-else src="img/notfound.png" alt="locandina not found">
               </li>
-              <li class="categoria"><h4>Film</h4></li>
               <li><h3>{{ film.title }}</h3></li>
               <li class="titoloOriginale">{{ film.original_title }}</li>
               <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
@@ -50,14 +54,18 @@
                   {{ film.original_language }}
                 </div>
               </li>
-              <li class="stelleVoto">
-                <i class="fas fa-star" v-for="i in stelleVoto(film.vote_average)"></i>
-                <i class="far fa-star" v-for="i in (5 - stelleVoto(film.vote_average))"></i>
-              </li>
             </ul>
         </div>
         <!-- lista delle serie tv -->
         <div class="lista" v-for="serie in serieTv">
+          <h4 class="categoria">Serie Tv</h4>
+          <!-- stelle per il voto con funz stelleVoto-->
+          <div class="stelleVoto">
+          <!--stelle scure per voto-->
+            <i class="fas fa-star" v-for="i in stelleVoto(serie.vote_average)"></i>
+          <!--stelle chiare differenza tra voto (stelle scure) e voto massimo mettendo stelle chiare  -->
+            <i class="far fa-star" v-for="i in (5 - stelleVoto(serie.vote_average))"></i>
+          </div>
           <div class="trama">
               <p v-if="serie.overview != ''">{{ serie.overview }}</p>
               <p v-else>Trama della serie non presente nel database </p>
@@ -67,7 +75,6 @@
               <img v-if="serie.poster_path":src="`http://image.tmdb.org/t/p/w342/${serie.poster_path}`" alt="locandina serie tv">
               <img v-else src="img/notfound.png" alt="locandina not found">
             </li>
-            <li class="categoria"><h4>Serie Tv</h4></li>
             <li><h3>{{ serie.name }}</h3></li>
             <li class="titoloOriginale">{{ serie.original_name }}</li>
             <!-- v-if per la lingua che con it & en deve essere sostituita dalla bandiera corrispondente -->
@@ -77,13 +84,7 @@
                 {{ serie.original_language }}
               </div>
             </li>
-            <!-- stelle per il voto con funz stelleVoto-->
-            <li class="stelleVoto">
-            <!--stelle scure per voto-->
-              <i class="fas fa-star" v-for="i in stelleVoto(serie.vote_average)"></i>
-            <!--stelle chiare differenza tra voto (stelle scure) e voto massimo mettendo stelle chiare  -->
-              <i class="far fa-star" v-for="i in (5 - stelleVoto(serie.vote_average))"></i>
-            </li>
+
           </ul>
         </div>
       </div>
