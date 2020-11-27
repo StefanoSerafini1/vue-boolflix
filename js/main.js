@@ -4,7 +4,7 @@ var app= new Vue({
     cerca:'',
     notfound:'no',
     //bandiere per lingua
-    bandiere: ['it', 'en', 'es', 'ja', 'de'],
+    bandiere: ['it', 'en', 'es', 'ja', 'de', 'fr', 'pt', 'da'],
     //creo la lista film dove andrò ad inserire tutti i risultati(dati) dei film
     films: [
 

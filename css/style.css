@@ -7,7 +7,8 @@
 body{
   background: black;
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Exo', sans-serif;
+  letter-spacing: 1px;
 }
 /* ricerca dei film e delle serie tv */
 .logoCerca{
@@ -20,16 +21,19 @@ body{
   background: #0f0f0ff2;
 }
 .logo img{
-  height: 60px;
-  width: 150px;
-  margin-left: 10px;
+  height: 49px;
+  width: 200px;
+  margin-left: 40px;
 }
 .cerca input{
-  width: 300px;
-  padding: 5px;
+  width: 320px;
+  padding: 7px;
   border-radius: 5px;
   outline: none;
   border: none;
+  background: #ebe9e9;
+  font-size: 16px;
+  margin-right: 5px;
 }
 .cerca input:focus{
   border: 3px red solid;
@@ -43,9 +47,11 @@ body{
   border: none;
   color: red;
   background: #0f0f0ff2;
+  font-size: 25px;
 }
 .cerca button:active{
   border: 2px #0f0f0ff2 solid;
+  border-radius: 5px;
 }
 .contenitoreLista{
   margin: 30px;
@@ -71,12 +77,12 @@ body{
   border-radius: 5px;
 }
 .notfound{
-  color:white;
+  color:#ebe9e9;
   font-size: 25px;
 }
 h3{
   color: white;
-  font-size: 15px;
+  font-size: 17px;
 }
 .titoloOriginale,
 .categoria{
@@ -92,7 +98,7 @@ h3{
 }
 .locandina img{
   width: 100%;
-  height: 45%;
+  height: 50%;
   /* max-height: 180px; */
   margin-bottom: 10px;
 }
@@ -110,6 +116,7 @@ h3{
   max-height: 400px;
   overflow-y: auto;
   padding: 15px;
+  font-family: 'Permanent Marker', cursive;
 }
 .lista:hover{
   min-height: 475px;
@@ -119,7 +126,8 @@ h3{
 }
 .lista:hover p,
 .lista:hover .categoria,
-.lista:hover .stelleVoto{
+.lista:hover .stelleVoto,
+.lista:hover .lingua{
   display: flex;
   font-size: 15px;
   color: white;
@@ -133,11 +141,11 @@ p::-webkit-scrollbar{
   width: 5px;
 }
 p::-webkit-scrollbar-track{
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px black;
   border-radius: 10px;
 }
 p::-webkit-scrollbar-thumb{
-  background: #15182af0;
+  background: red;
   border-radius: 10px;
 }
 /* design scrollbar della descrizione per firefox */
@@ -146,13 +154,17 @@ p{
   scrollbar-color:#15182af0  grey;
 }
 /* lingua immagini */
+.lingua{
+  display: none;
+}
 .lingua img{
   height: 15px;
   width: 25px;
+  margin-left: 100px;
 }
 /* stelle voto */
 .stelleVoto .fas{
-  color: #ca3509f5;
+  color: red;
 }
 .stelleVoto .far{
   color: red;
