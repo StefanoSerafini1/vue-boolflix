@@ -3,7 +3,7 @@ var app= new Vue({
   data:{
     cerca:'',
     //bandiere per lingua
-    bandiere: ['it', 'en'],
+    bandiere: ['it', 'en', 'es', 'ja', 'de'],
     //creo la lista film dove andrò ad inserire tutti i risultati(dati) dei film
     films: [
 
@@ -50,6 +50,7 @@ var app= new Vue({
     stelleVoto(vote) {
       return Math.floor(vote / 2);
     },
+    //funzione per assegnare le bandiere disponibili
     bandiereScelta(lang){
            return this.bandiere.includes(lang);
     }
